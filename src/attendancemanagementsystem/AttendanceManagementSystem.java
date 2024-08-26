@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class AttendanceManagementSystem {
 
     public static void main(String[] args) {
-        //University.dummyValues();
+        University.dummyValues();
         welcomeScreen welcome = new welcomeScreen();
         welcome.setVisible(true);
         try {

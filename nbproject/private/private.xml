@@ -3,16 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/Section.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Designs/signUpTeacher.java</file>
             <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/Student.java</file>
-            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/attendancemanagementsystem/AttendanceManagementSystem.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Designs/dashboardAdmin.java</file>
             <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/Course.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Designs/welcomeScreen.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/CourseEnrollment.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Designs/starting.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/University.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/Teacher.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/Section.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/attendancemanagementsystem/AttendanceManagementSystem.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/build.xml</file>
             <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/Person.java</file>
             <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/Attendance.java</file>
-            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/CourseEnrollment.java</file>
-            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/University.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Designs/signUpStudent.java</file>
+            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Designs/adminLogin.java</file>
             <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Designs/addTeacher.java</file>
-            <file>file:/C:/Users/Ali/Documents/NetBeansProjects/AttendanceManagementSystem/src/Classes/Teacher.java</file>
         </group>
     </open-files>
 </project-private>

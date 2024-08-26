@@ -256,7 +256,14 @@ public class addTeacher extends javax.swing.JFrame {
            !phonenoTF.getText().isEmpty()&&!teacheridTF.getText().isEmpty()&&
            !departmentTF.getText().isEmpty()&&!salaryTF.getText().isEmpty()){
             Teacher t = new Teacher(teacheridTF.getText(), departmentTF.getText(), Double.parseDouble(salaryTF.getText()), nameTF.getText(), phonenoTF.getText(), addressTF.getText());
-            //University.addmissionOfTeacher(t);
+            University.addmissionOfTeacher(t);
+            JOptionPane.showMessageDialog(null,"Teacher has added into University successfully");
+            nameTF.setText("");
+            teacheridTF.setText("");
+            addressTF.setText("");
+            phonenoTF.setText("");
+            departmentTF.setText("");
+            salaryTF.setText("");
         }
         else{
             JOptionPane.showMessageDialog(null,"Fill All Feilds");

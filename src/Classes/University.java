@@ -21,13 +21,21 @@ public class University {
 
     // Constructor
     public University() {
-        this.universityId = "1";
-        this.name = "Avengers";
-        this.location = "New York, USA" ;
-        teachers = new ArrayList<>();
+        
     }
 
     // Methods
+    
+    static {
+        universityId = "1";
+        name = "Avengers";
+        location = "New York, USA" ;
+        students = new ArrayList<>();
+        teachers = new ArrayList<>();
+        courses = new ArrayList<>();
+        sections = new ArrayList<>();
+    }
+    
     public static ArrayList<Student> getStudents() {
         return students;
     }
@@ -48,11 +56,11 @@ public class University {
         return "University name is "+name+". It is loacated in "+location+". ";
     }
     
-//    public static void dummyValues(){
-//        for (int i = 0; i < 5; i++) {
-//            teachers.add(new Teacher("123"+i, "dummy", -0, "dummy", "dummy", "dummy"));
-//        }
-//    }
+    public static void dummyValues(){
+        for (int i = 0; i < 5; i++) {
+            teachers.add(new Teacher("123"+i, "dummy", -0, "dummy", "dummy", "dummy"));
+        }
+    }
     
     public static void addmissionOfStudent(Student s){
         students.add(s);
