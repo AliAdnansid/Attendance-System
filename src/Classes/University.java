@@ -69,4 +69,12 @@ public class University {
     public static void addmissionOfTeacher(Teacher t){
         teachers.add(t);
     }
+    
+    public static Teacher getTeacher(int i){
+        return teachers.get(i);
+    }
+    
+    public static void removeTeacher(int i){
+        teachers.remove(i);
+    }
 }
