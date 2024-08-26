@@ -48,11 +48,11 @@ public class University {
         return "University name is "+name+". It is loacated in "+location+". ";
     }
     
-    public static void dummyValues(){
-        for (int i = 0; i < 5; i++) {
-            teachers.add(new Teacher("123"+i, "dummy", -0, "dummy", "dummy", "dummy"));
-        }
-    }
+//    public static void dummyValues(){
+//        for (int i = 0; i < 5; i++) {
+//            teachers.add(new Teacher("123"+i, "dummy", -0, "dummy", "dummy", "dummy"));
+//        }
+//    }
     
     public static void addmissionOfStudent(Student s){
         students.add(s);
