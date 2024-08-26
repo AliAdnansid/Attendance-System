@@ -77,4 +77,12 @@ public class University {
     public static void removeTeacher(int i){
         teachers.remove(i);
     }
+    
+    public static Student getStudent(int i){
+        return students.get(i);
+    }
+    
+    public static void removeStudent(int i){
+        students.remove(i);
+    }
 }

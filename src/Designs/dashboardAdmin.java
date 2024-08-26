@@ -32,13 +32,13 @@ public class dashboardAdmin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         addTB = new javax.swing.JButton();
         deleteTB = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        searchB = new javax.swing.JButton();
         updateB = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
+        updateSB = new javax.swing.JButton();
+        addSB = new javax.swing.JButton();
+        deleteSB = new javax.swing.JButton();
+        searchSB = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
@@ -84,10 +84,15 @@ public class dashboardAdmin extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
-        jButton4.setText("SEARCH");
+        searchB.setBackground(new java.awt.Color(255, 255, 255));
+        searchB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        searchB.setForeground(new java.awt.Color(0, 0, 0));
+        searchB.setText("SEARCH");
+        searchB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchBActionPerformed(evt);
+            }
+        });
 
         updateB.setBackground(new java.awt.Color(255, 255, 255));
         updateB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -109,7 +114,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(deleteTB)
                 .addGap(30, 30, 30)
-                .addComponent(jButton4)
+                .addComponent(searchB)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(updateB)
                 .addContainerGap())
@@ -121,32 +126,32 @@ public class dashboardAdmin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addTB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deleteTB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 153, 153));
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
-        jButton6.setText("UPDATE");
+        updateSB.setBackground(new java.awt.Color(255, 255, 255));
+        updateSB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        updateSB.setForeground(new java.awt.Color(0, 0, 0));
+        updateSB.setText("UPDATE");
 
-        jButton7.setBackground(new java.awt.Color(255, 255, 255));
-        jButton7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
-        jButton7.setText("ADD");
+        addSB.setBackground(new java.awt.Color(255, 255, 255));
+        addSB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        addSB.setForeground(new java.awt.Color(0, 0, 0));
+        addSB.setText("ADD");
 
-        jButton8.setBackground(new java.awt.Color(255, 255, 255));
-        jButton8.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(0, 0, 0));
-        jButton8.setText("DELETE");
+        deleteSB.setBackground(new java.awt.Color(255, 255, 255));
+        deleteSB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        deleteSB.setForeground(new java.awt.Color(0, 0, 0));
+        deleteSB.setText("DELETE");
 
-        jButton9.setBackground(new java.awt.Color(255, 255, 255));
-        jButton9.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(0, 0, 0));
-        jButton9.setText("SEARCH");
+        searchSB.setBackground(new java.awt.Color(255, 255, 255));
+        searchSB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        searchSB.setForeground(new java.awt.Color(0, 0, 0));
+        searchSB.setText("SEARCH");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -154,13 +159,13 @@ public class dashboardAdmin extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addSB, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
-                .addComponent(jButton8)
+                .addComponent(deleteSB)
                 .addGap(30, 30, 30)
-                .addComponent(jButton9)
+                .addComponent(searchSB)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(updateSB)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -168,10 +173,10 @@ public class dashboardAdmin extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(addSB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deleteSB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchSB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updateSB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -357,6 +362,13 @@ public class dashboardAdmin extends javax.swing.JFrame {
         new updateTeacher().setVisible(true);
     }//GEN-LAST:event_updateBActionPerformed
 
+    private void searchBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new searchTeacher().setVisible(true);
+    }//GEN-LAST:event_searchBActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -394,19 +406,16 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addSB;
     private javax.swing.JButton addTB;
     private javax.swing.JButton backB;
     private javax.swing.JButton backB1;
+    private javax.swing.JButton deleteSB;
     private javax.swing.JButton deleteTB;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -415,6 +424,9 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JButton searchB;
+    private javax.swing.JButton searchSB;
     private javax.swing.JButton updateB;
+    private javax.swing.JButton updateSB;
     // End of variables declaration//GEN-END:variables
 }

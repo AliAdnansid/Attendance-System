@@ -13,14 +13,14 @@ import java.util.ArrayList;
 public class Student extends Person {
     
     String studentId;
-    String studentEmainl;
+    String studentEmail;
     private ArrayList<CourseEnrollment> enrollments;
     private ArrayList<Attendance> attendance;
 
-    public Student(String studentId, String studentEmainl, String name, String address, String phone_no) {
+    public Student(String studentId, String studentEmail, String name, String address, String phone_no) {
         super(name, address, phone_no);
         this.studentId = studentId;
-        this.studentEmainl = studentEmainl;
+        this.studentEmail = studentEmail;
     }    
 
     public String getStudentId() {
@@ -31,12 +31,12 @@ public class Student extends Person {
         this.studentId = studentId;
     }
 
-    public String getStudentEmainl() {
-        return studentEmainl;
+    public String getStudentEmail() {
+        return studentEmail;
     }
 
-    public void setStudentEmainl(String studentEmainl) {
-        this.studentEmainl = studentEmainl;
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
     }
 
     public ArrayList<CourseEnrollment> getEnrollments() {
