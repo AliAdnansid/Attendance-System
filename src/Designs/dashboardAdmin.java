@@ -40,15 +40,15 @@ public class dashboardAdmin extends javax.swing.JFrame {
         deleteSB = new javax.swing.JButton();
         searchSB = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
+        updateCB = new javax.swing.JButton();
+        addCB = new javax.swing.JButton();
+        deleteCB = new javax.swing.JButton();
+        searchCB = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         backB = new javax.swing.JButton();
-        backB1 = new javax.swing.JButton();
+        sectionB = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -202,25 +202,45 @@ public class dashboardAdmin extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 153, 153));
 
-        jButton10.setBackground(new java.awt.Color(255, 255, 255));
-        jButton10.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(0, 0, 0));
-        jButton10.setText("UPDATE");
+        updateCB.setBackground(new java.awt.Color(255, 255, 255));
+        updateCB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        updateCB.setForeground(new java.awt.Color(0, 0, 0));
+        updateCB.setText("UPDATE");
+        updateCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateCBActionPerformed(evt);
+            }
+        });
 
-        jButton11.setBackground(new java.awt.Color(255, 255, 255));
-        jButton11.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(0, 0, 0));
-        jButton11.setText("ADD");
+        addCB.setBackground(new java.awt.Color(255, 255, 255));
+        addCB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        addCB.setForeground(new java.awt.Color(0, 0, 0));
+        addCB.setText("ADD");
+        addCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCBActionPerformed(evt);
+            }
+        });
 
-        jButton12.setBackground(new java.awt.Color(255, 255, 255));
-        jButton12.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton12.setForeground(new java.awt.Color(0, 0, 0));
-        jButton12.setText("DELETE");
+        deleteCB.setBackground(new java.awt.Color(255, 255, 255));
+        deleteCB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        deleteCB.setForeground(new java.awt.Color(0, 0, 0));
+        deleteCB.setText("DELETE");
+        deleteCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteCBActionPerformed(evt);
+            }
+        });
 
-        jButton13.setBackground(new java.awt.Color(255, 255, 255));
-        jButton13.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(0, 0, 0));
-        jButton13.setText("SEARCH");
+        searchCB.setBackground(new java.awt.Color(255, 255, 255));
+        searchCB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        searchCB.setForeground(new java.awt.Color(0, 0, 0));
+        searchCB.setText("SEARCH");
+        searchCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchCBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -228,13 +248,13 @@ public class dashboardAdmin extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addCB, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
-                .addComponent(jButton12)
+                .addComponent(deleteCB)
                 .addGap(30, 30, 30)
-                .addComponent(jButton13)
+                .addComponent(searchCB)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                .addComponent(jButton10)
+                .addComponent(updateCB)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -242,10 +262,10 @@ public class dashboardAdmin extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(addCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deleteCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updateCB, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
@@ -273,12 +293,12 @@ public class dashboardAdmin extends javax.swing.JFrame {
             }
         });
 
-        backB1.setBackground(new java.awt.Color(255, 153, 153));
-        backB1.setForeground(new java.awt.Color(0, 0, 0));
-        backB1.setText("Course Section Management");
-        backB1.addActionListener(new java.awt.event.ActionListener() {
+        sectionB.setBackground(new java.awt.Color(255, 153, 153));
+        sectionB.setForeground(new java.awt.Color(0, 0, 0));
+        sectionB.setText("Course Section Management");
+        sectionB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backB1ActionPerformed(evt);
+                sectionBActionPerformed(evt);
             }
         });
 
@@ -309,7 +329,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(backB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(backB1)
+                        .addComponent(sectionB)
                         .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
@@ -332,7 +352,7 @@ public class dashboardAdmin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backB)
-                    .addComponent(backB1))
+                    .addComponent(sectionB))
                 .addGap(0, 13, Short.MAX_VALUE))
         );
 
@@ -364,9 +384,13 @@ public class dashboardAdmin extends javax.swing.JFrame {
         new adminLogin().setVisible(true);
     }//GEN-LAST:event_backBActionPerformed
 
-    private void backB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backB1ActionPerformed
+    private void sectionBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sectionBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_backB1ActionPerformed
+        this.setVisible(false);
+        this.dispose();
+        new sectionManagement().setVisible(true);
+        
+    }//GEN-LAST:event_sectionBActionPerformed
 
     private void deleteTBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteTBActionPerformed
         // TODO add your handling code here:
@@ -417,6 +441,34 @@ public class dashboardAdmin extends javax.swing.JFrame {
         new updateStudent().setVisible(true);
     }//GEN-LAST:event_updateSBActionPerformed
 
+    private void addCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new addCourse().setVisible(true);
+    }//GEN-LAST:event_addCBActionPerformed
+
+    private void deleteCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteCBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new deleteCourse().setVisible(true);
+    }//GEN-LAST:event_deleteCBActionPerformed
+
+    private void searchCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new searchCourse().setVisible(true);
+    }//GEN-LAST:event_searchCBActionPerformed
+
+    private void updateCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateCBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new updateCourse().setVisible(true);
+    }//GEN-LAST:event_updateCBActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -454,16 +506,13 @@ public class dashboardAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addCB;
     private javax.swing.JButton addSB;
     private javax.swing.JButton addTB;
     private javax.swing.JButton backB;
-    private javax.swing.JButton backB1;
+    private javax.swing.JButton deleteCB;
     private javax.swing.JButton deleteSB;
     private javax.swing.JButton deleteTB;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -473,8 +522,11 @@ public class dashboardAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JButton searchB;
+    private javax.swing.JButton searchCB;
     private javax.swing.JButton searchSB;
+    private javax.swing.JButton sectionB;
     private javax.swing.JButton updateB;
+    private javax.swing.JButton updateCB;
     private javax.swing.JButton updateSB;
     // End of variables declaration//GEN-END:variables
 }

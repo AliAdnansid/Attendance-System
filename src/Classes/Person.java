@@ -43,5 +43,9 @@ public class Person {
         this.phone_no = phone_no;
     }
     
+    public Person(){
+        
+    }
+    
     
 }

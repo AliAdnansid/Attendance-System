@@ -85,4 +85,36 @@ public class University {
     public static void removeStudent(int i){
         students.remove(i);
     }
+    
+    public static Course getCourse(int i){
+        return courses.get(i);
+    }
+    
+    public static void removeCourse(int i){
+        courses.remove(i);
+    }
+    
+    public static void addmissionOfCourse(Course t){
+        courses.add(t);
+    }
+    
+    public static Course searchCourse(String key){
+        
+        for (int i = 0; i < courses.size(); i++) {
+            if(courses.get(i).getCourseId().equals(key)){
+                return courses.get(i);
+            }
+        }
+        return null;
+        
+    }
+    
+    public static Teacher getTeacherByName(String key){
+        for (int i = 0; i < teachers.size(); i++) {
+            if(teachers.get(i).getName().equalsIgnoreCase(key)){
+                return teachers.get(i);
+            }
+        }
+        return null;
+    }
 }

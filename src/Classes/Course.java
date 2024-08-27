@@ -14,7 +14,8 @@ public class Course {
    
     private String name;
     private String courseId;
-    private ArrayList<CourseEnrollment> enrollments;
+    private String department;
+    private int creditHours;
     private ArrayList<Section> sections;
 
     public Course(String name, String courseId) {
@@ -23,12 +24,15 @@ public class Course {
   
     }
 
-    public ArrayList<CourseEnrollment> getEnrollments() {
-        return enrollments;
+    public Course(){
+        
+    }
+    public int getCreditHours() {
+        return creditHours;
     }
 
-    public void setEnrollments(ArrayList<CourseEnrollment> enrollments) {
-        this.enrollments = enrollments;
+    public void setCreditHours(int creditHours) {
+        this.creditHours = creditHours;
     }
 
     public ArrayList<Section> getSections() {
@@ -37,10 +41,6 @@ public class Course {
 
     public void setSections(ArrayList<Section> sections) {
         this.sections = sections;
-    }
-    
-    public Course(){
-        
     }
 
     public String getName() {
@@ -59,5 +59,22 @@ public class Course {
         this.courseId = courseId;
     }
     
-     
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    } 
+    
+    public Course(String name, String courseId, String department, int creditHours) {
+        this.name = name;
+        this.courseId = courseId;
+        this.department = department;
+        this.creditHours = creditHours;
+    }
+    
+    public Section getSection(int i){
+        return sections.get(i);
+    }
 }

@@ -36,6 +36,10 @@ public class Teacher extends Person{
         return teacherId;
     }
 
+    public Teacher(){
+        super();
+    }
+    
     public void setTeacherId(String teacherId) {
         this.teacherId = teacherId;
     }

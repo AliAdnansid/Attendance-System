@@ -18,7 +18,7 @@ public class Section {
     private int slotNo;
     private Teacher instructor;
     private Course course;
-    private ArrayList<Student> studentsInSection;
+    private ArrayList<CourseEnrollment> studentsInSection;
 
     public Section(String name, String day, String room, int slotNo, Teacher instructor, Course course) {
         this.name = name;
@@ -46,11 +46,11 @@ public class Section {
         this.course = course;
     }
 
-    public ArrayList<Student> getStudentsInSection() {
+    public ArrayList<CourseEnrollment> getStudentsInSection() {
         return studentsInSection;
     }
 
-    public void setStudentsInSection(ArrayList<Student> studentsInSection) {
+    public void setStudentsInSection(ArrayList<CourseEnrollment> studentsInSection) {
         this.studentsInSection = studentsInSection;
     }
 

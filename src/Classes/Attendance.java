@@ -9,7 +9,7 @@ package Classes;
  * @author Ali
  */
 public class Attendance {
-     private String attendanceStatus;
+    private String attendanceStatus;
     private String date;
     private String time;
     private Student student;
