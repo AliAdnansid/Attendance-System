@@ -12,33 +12,35 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Ali
  */
-public class searchTeacher extends javax.swing.JFrame {
+public class searchStudent extends javax.swing.JFrame {
 
     /**
-     * Creates new form searchTeacher
+     * Creates new form searchStudent
      */
-        public void setValues(){
+    
+    public void setValues(){
+        
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         model.setRowCount(0);
-        for (int i = 0; i < University.getTeachers().size(); i++) {
+        for (int i = 0; i < University.getStudents().size(); i++) {
             
-                Object [] cols = new Object[6];
-                cols[0] = University.getTeacher(i).getTeacherId();
-                cols[1] = University.getTeacher(i).getName();
-                cols[2] = University.getTeacher(i).getAddress();
-                cols[3] = University.getTeacher(i).getSalary();
-                cols[4] = University.getTeacher(i).getDepartment();
-                cols[5] = University.getTeacher(i).getPhone_no();
+                Object [] cols = new Object[5];
+                cols[0] = University.getStudent(i).getStudentId();
+                cols[1] = University.getStudent(i).getName();
+                cols[2] = University.getStudent(i).getAddress();
+                cols[3] = University.getStudent(i).getStudentEmail();
+                cols[4] = University.getStudent(i).getPhone_no();
+                
                 model.addRow(cols);
                 
             
         }
     }
-        
-    public searchTeacher() {
+    
+    public searchStudent() {
         initComponents();
-        setLocation(400, 100);
         setValues();
+        setLocation(400, 100);
     }
 
     /**
@@ -51,53 +53,19 @@ public class searchTeacher extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        searchB = new javax.swing.JButton();
+        backB = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
         jLabel8 = new javax.swing.JLabel();
-        teacheridTF = new javax.swing.JTextField();
-        searchB = new javax.swing.JButton();
-        backB = new javax.swing.JButton();
+        studentidTF = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assests/logo.png"))); // NOI18N
-
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel3.setText("University");
-
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Search Teacher in University");
-
-        table.setBackground(new java.awt.Color(204, 204, 204));
-        table.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        table.setForeground(new java.awt.Color(0, 0, 0));
-        table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Teacher ID", "Name", "Address", "Salary", "Department", "Phone no"
-            }
-        ));
-        jScrollPane1.setViewportView(table);
-
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel8.setText("Teacher ID");
-
-        teacheridTF.setBackground(new java.awt.Color(255, 255, 255));
-        teacheridTF.setForeground(new java.awt.Color(0, 0, 0));
-        teacheridTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        teacheridTF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         searchB.setBackground(new java.awt.Color(255, 153, 153));
         searchB.setForeground(new java.awt.Color(0, 0, 0));
@@ -117,6 +85,40 @@ public class searchTeacher extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assests/logo.png"))); // NOI18N
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel3.setText("University");
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Search Student in University");
+
+        table.setBackground(new java.awt.Color(204, 204, 204));
+        table.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        table.setForeground(new java.awt.Color(0, 0, 0));
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Student ID", "Name", "Address", "Student Email", "Phone no"
+            }
+        ));
+        jScrollPane1.setViewportView(table);
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel8.setText("Student ID");
+
+        studentidTF.setBackground(new java.awt.Color(255, 255, 255));
+        studentidTF.setForeground(new java.awt.Color(0, 0, 0));
+        studentidTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        studentidTF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -135,7 +137,7 @@ public class searchTeacher extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(teacheridTF, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+                    .addComponent(studentidTF, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(searchB)
@@ -164,7 +166,7 @@ public class searchTeacher extends javax.swing.JFrame {
                         .addGap(71, 71, 71)
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(teacheridTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(studentidTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(searchB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -186,29 +188,27 @@ public class searchTeacher extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
     private void searchBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBActionPerformed
         // TODO add your handling code here:
-        String key = teacheridTF.getText();
+        String key = studentidTF.getText();
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         model.setRowCount(0);
-        for (int i = 0; i < University.getTeachers().size(); i++) {
-            if(University.getTeacher(i).getTeacherId().equals(key)){
-                Object [] cols = new Object[6];
-                cols[0] = University.getTeacher(i).getTeacherId();
-                cols[1] = University.getTeacher(i).getName();
-                cols[2] = University.getTeacher(i).getAddress();
-                cols[3] = University.getTeacher(i).getSalary();
-                cols[4] = University.getTeacher(i).getDepartment();
-                cols[5] = University.getTeacher(i).getPhone_no();
+        for (int i = 0; i < University.getStudents().size(); i++) {
+            if(University.getStudent(i).getStudentId().equals(key)){
+                Object [] cols = new Object[5];
+                cols[0] = University.getStudent(i).getStudentId();
+                cols[1] = University.getStudent(i).getName();
+                cols[2] = University.getStudent(i).getAddress();
+                cols[3] = University.getStudent(i).getStudentEmail();
+                cols[4] = University.getStudent(i).getPhone_no();
+                
                 model.addRow(cols);
                 return;
             }
         }
         JOptionPane.showMessageDialog(null, "There is no Teacher on such ID");
-        
-        //
 
+        //
     }//GEN-LAST:event_searchBActionPerformed
 
     private void backBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBActionPerformed
@@ -235,23 +235,20 @@ public class searchTeacher extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(searchTeacher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(searchStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(searchTeacher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(searchStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(searchTeacher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(searchStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(searchTeacher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(searchStudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
-                new searchTeacher().setVisible(true);
-              
-                
+                new searchStudent().setVisible(true);
             }
         });
     }
@@ -265,7 +262,7 @@ public class searchTeacher extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton searchB;
+    private javax.swing.JTextField studentidTF;
     private javax.swing.JTable table;
-    private javax.swing.JTextField teacheridTF;
     // End of variables declaration//GEN-END:variables
 }

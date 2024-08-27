@@ -137,21 +137,41 @@ public class dashboardAdmin extends javax.swing.JFrame {
         updateSB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         updateSB.setForeground(new java.awt.Color(0, 0, 0));
         updateSB.setText("UPDATE");
+        updateSB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateSBActionPerformed(evt);
+            }
+        });
 
         addSB.setBackground(new java.awt.Color(255, 255, 255));
         addSB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         addSB.setForeground(new java.awt.Color(0, 0, 0));
         addSB.setText("ADD");
+        addSB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addSBActionPerformed(evt);
+            }
+        });
 
         deleteSB.setBackground(new java.awt.Color(255, 255, 255));
         deleteSB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         deleteSB.setForeground(new java.awt.Color(0, 0, 0));
         deleteSB.setText("DELETE");
+        deleteSB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteSBActionPerformed(evt);
+            }
+        });
 
         searchSB.setBackground(new java.awt.Color(255, 255, 255));
         searchSB.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         searchSB.setForeground(new java.awt.Color(0, 0, 0));
         searchSB.setText("SEARCH");
+        searchSB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchSBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -368,6 +388,34 @@ public class dashboardAdmin extends javax.swing.JFrame {
         this.dispose();
         new searchTeacher().setVisible(true);
     }//GEN-LAST:event_searchBActionPerformed
+
+    private void addSBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addSBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new addStudent().setVisible(true);
+    }//GEN-LAST:event_addSBActionPerformed
+
+    private void deleteSBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteSBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new deleteStudent().setVisible(true);
+    }//GEN-LAST:event_deleteSBActionPerformed
+
+    private void searchSBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchSBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new searchStudent().setVisible(true);
+    }//GEN-LAST:event_searchSBActionPerformed
+
+    private void updateSBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateSBActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        this.dispose();
+        new updateStudent().setVisible(true);
+    }//GEN-LAST:event_updateSBActionPerformed
 
     /**
      * @param args the command line arguments

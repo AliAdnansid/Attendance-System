@@ -39,9 +39,9 @@ public class updateTeacher extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         nameTF = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        teacheridTF1 = new javax.swing.JTextField();
+        keyTF = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        teacheridTFR = new javax.swing.JTextField();
+        teacheridTF = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         phonenoTF = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
@@ -94,21 +94,21 @@ public class updateTeacher extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel9.setText("Teacher ID");
+        jLabel9.setText("Teacher ID for Search");
 
-        teacheridTF1.setBackground(new java.awt.Color(255, 255, 255));
-        teacheridTF1.setForeground(new java.awt.Color(0, 0, 0));
-        teacheridTF1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        teacheridTF1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        keyTF.setBackground(new java.awt.Color(255, 255, 255));
+        keyTF.setForeground(new java.awt.Color(0, 0, 0));
+        keyTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        keyTF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 0, 0));
         jLabel10.setText("Teacher ID");
 
-        teacheridTFR.setBackground(new java.awt.Color(255, 255, 255));
-        teacheridTFR.setForeground(new java.awt.Color(0, 0, 0));
-        teacheridTFR.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        teacheridTFR.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        teacheridTF.setBackground(new java.awt.Color(255, 255, 255));
+        teacheridTF.setForeground(new java.awt.Color(0, 0, 0));
+        teacheridTF.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        teacheridTF.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 0, 0));
@@ -215,7 +215,7 @@ public class updateTeacher extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(nameTF, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(teacheridTFR, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(teacheridTF, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(403, 403, 403))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -230,18 +230,15 @@ public class updateTeacher extends javax.swing.JFrame {
                                         .addComponent(departmentTF, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(35, 35, 35))))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(129, 129, 129)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(searchB)
                 .addGap(111, 111, 111))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(157, 157, 157)
-                    .addComponent(jLabel9)
-                    .addContainerGap(477, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(287, Short.MAX_VALUE)
-                    .addComponent(teacheridTF1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(keyTF, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(199, 199, 199)))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -261,12 +258,14 @@ public class updateTeacher extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(jLabel5)
                 .addGap(35, 35, 35)
-                .addComponent(searchB)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(searchB)
+                    .addComponent(jLabel9))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(salaryTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(teacheridTFR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(teacheridTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
@@ -286,13 +285,8 @@ public class updateTeacher extends javax.swing.JFrame {
                 .addGap(95, 95, 95))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(241, 241, 241)
-                    .addComponent(jLabel9)
-                    .addContainerGap(285, Short.MAX_VALUE)))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(242, 242, 242)
-                    .addComponent(teacheridTF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(keyTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(285, Short.MAX_VALUE)))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -317,10 +311,10 @@ public class updateTeacher extends javax.swing.JFrame {
 
     private void searchBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBActionPerformed
         // TODO add your handling code here:
-        String key = teacheridTF1.getText();
+        String key = keyTF.getText();
         for (int i = 0; i < University.getTeachers().size(); i++) {
             if(University.getTeacher(i).getTeacherId().equals(key)){
-                teacheridTFR.setText(University.getTeacher(i).getTeacherId());
+                teacheridTF.setText(University.getTeacher(i).getTeacherId());
                 nameTF.setText(University.getTeacher(i).getName());
                 addressTF.setText(University.getTeacher(i).getAddress());
                 salaryTF.setText(Double.toString(University.getTeacher(i).getSalary()));
@@ -330,7 +324,7 @@ public class updateTeacher extends javax.swing.JFrame {
             }
         }
         JOptionPane.showMessageDialog(null, "There is no Teacher on such ID");
-        teacheridTFR.setText("");
+        teacheridTF.setText("");
         nameTF.setText("");
         addressTF.setText("");
         salaryTF.setText("");
@@ -344,16 +338,16 @@ public class updateTeacher extends javax.swing.JFrame {
         if(!nameTF.getText().isEmpty()&&!addressTF.getText().isEmpty()&&
             !phonenoTF.getText().isEmpty()&&!nameTF.getText().isEmpty()&&
             !departmentTF.getText().isEmpty()&&!salaryTF.getText().isEmpty()){
-            String key = teacheridTF1.getText();
+            String key = keyTF.getText();
             for (int i = 0; i < University.getTeachers().size(); i++) {
                 if(University.getTeacher(i).getTeacherId().equals(key)){
-                    University.getTeacher(i).setTeacherId(teacheridTFR.getText());
+                    University.getTeacher(i).setTeacherId(teacheridTF.getText());
                     University.getTeacher(i).setName(nameTF.getText());
                     University.getTeacher(i).setAddress(addressTF.getText());
                     University.getTeacher(i).setDepartment(departmentTF.getText());
                     University.getTeacher(i).setPhone_no(phonenoTF.getText());
                     University.getTeacher(i).setSalary(Double.parseDouble(salaryTF.getText()));
-                    teacheridTFR.setText("");
+                    teacheridTF.setText("");
                     nameTF.setText("");
                     addressTF.setText("");
                     salaryTF.setText("");
@@ -429,11 +423,11 @@ public class updateTeacher extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField keyTF;
     private javax.swing.JTextField nameTF;
     private javax.swing.JTextField phonenoTF;
     private javax.swing.JTextField salaryTF;
     private javax.swing.JButton searchB;
-    private javax.swing.JTextField teacheridTF1;
-    private javax.swing.JTextField teacheridTFR;
+    private javax.swing.JTextField teacheridTF;
     // End of variables declaration//GEN-END:variables
 }

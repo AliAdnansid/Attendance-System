@@ -292,6 +292,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="UPDATE"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateSBActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="addSB">
               <Properties>
@@ -306,6 +309,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="ADD"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addSBActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="deleteSB">
               <Properties>
@@ -320,6 +326,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="DELETE"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteSBActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="searchSB">
               <Properties>
@@ -334,6 +343,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="SEARCH"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchSBActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
