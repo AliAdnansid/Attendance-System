@@ -6,8 +6,10 @@ package attendancemanagementsystem;
 
 import Classes.Attendance;
 import Classes.University;
+import Classes.database;
 import Designs.starting;
 import Designs.welcomeScreen;
+import java.sql.Connection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -18,6 +20,7 @@ import java.util.logging.Logger;
 public class AttendanceManagementSystem {
 
     public static void main(String[] args) {
+        Connection con = database.getConnection(); 
         University.dummyValues();
         welcomeScreen welcome = new welcomeScreen();
         welcome.setVisible(true);

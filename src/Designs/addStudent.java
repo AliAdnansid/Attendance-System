@@ -6,6 +6,12 @@ package Designs;
 
 import Classes.Student;
 import Classes.University;
+import Classes.DAO_Education;
+import Classes.DAO_EducationImpl;
+import Classes.database;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -237,12 +243,22 @@ public class addStudent extends javax.swing.JFrame {
             !emailTF.getText().isEmpty()){
             Student t = new Student(studentidTF.getText(), emailTF.getText(), nameTF.getText(), addressTF.getText(), phonenoTF.getText());
             University.addmissionOfStudent(t);
+            DAO_EducationImpl d = new DAO_EducationImpl();
+            
+            try {
+                d.insertStoredProcedureIntoStudent(nameTF.getText(),emailTF.getText(), addressTF.getText(), phonenoTF.getText());
+            } catch (SQLException ex) {
+                Logger.getLogger(addStudent.class.getName()).log(Level.SEVERE, null, ex);
+            }
             //JOptionPane.showMessageDialog(null,"Teacher has added into University successfully");
             nameTF.setText("");
             studentidTF.setText("");
             addressTF.setText("");
             phonenoTF.setText("");
             emailTF.setText("");
+            
+            
+            
             
         }
         else{

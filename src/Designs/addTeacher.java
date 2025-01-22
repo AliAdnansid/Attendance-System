@@ -4,8 +4,12 @@
  */
 package Designs;
 
+import Classes.DAO_EducationImpl;
 import Classes.Teacher;
 import Classes.University;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 
@@ -260,6 +264,13 @@ public class addTeacher extends javax.swing.JFrame {
            !departmentTF.getText().isEmpty()&&!salaryTF.getText().isEmpty()){
             Teacher t = new Teacher(teacheridTF.getText(), departmentTF.getText(), Double.parseDouble(salaryTF.getText()), nameTF.getText(), phonenoTF.getText(), addressTF.getText());
             University.addmissionOfTeacher(t);
+            DAO_EducationImpl d = new DAO_EducationImpl();
+            
+            try {
+                d.insertStoredProcedureIntoTeacher(nameTF.getText(), departmentTF.getText(),Double.parseDouble(salaryTF.getText()), addressTF.getText(),phonenoTF.getText());
+            } catch (SQLException ex) {
+                Logger.getLogger(addCourse.class.getName()).log(Level.SEVERE, null, ex);
+            }
             //JOptionPane.showMessageDialog(null,"Teacher has added into University successfully");
             nameTF.setText("");
             teacheridTF.setText("");

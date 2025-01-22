@@ -191,7 +191,7 @@ public class adminLogin extends javax.swing.JFrame {
 
     private void loginBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginBActionPerformed
         // TODO add your handling code here:
-        if(adminTF.getText().equals("AliAdnansid") && passwordTF.getText().equals("1122")){
+        if(adminTF.getText().equals("Arooj") && passwordTF.getText().equals("123")){
             this.setVisible(false);
             this.dispose();
             new dashboardAdmin().setVisible(true);

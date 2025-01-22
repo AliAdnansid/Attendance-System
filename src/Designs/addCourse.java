@@ -5,7 +5,11 @@
 package Designs;
 
 import Classes.Course;
+import Classes.DAO_EducationImpl;
 import Classes.University;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -214,6 +218,13 @@ public class addCourse extends javax.swing.JFrame {
             Course t = new Course(nameTF.getText(), courseidTF.getText(), departmentTF.getText(), Integer.parseInt(credithoursTF.getText()));
             University.addmissionOfCourse(t);
             //JOptionPane.showMessageDialog(null,"Teacher has added into University successfully");
+            DAO_EducationImpl d = new DAO_EducationImpl();
+            
+            try {
+                d.insertStoredProcedureIntoCourse(nameTF.getText(), departmentTF.getText(),Integer.parseInt(credithoursTF.getText()));
+            } catch (SQLException ex) {
+                Logger.getLogger(addCourse.class.getName()).log(Level.SEVERE, null, ex);
+            }
             nameTF.setText("");
             courseidTF.setText("");
             credithoursTF.setText("");

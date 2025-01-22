@@ -4,7 +4,11 @@
  */
 package Designs;
 
+import Classes.DAO_EducationImpl;
 import Classes.University;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -196,6 +200,13 @@ public class deleteStudent extends javax.swing.JFrame {
     private void deleteBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBActionPerformed
         // TODO add your handling code here:
         String key = studentidTF.getText();
+        DAO_EducationImpl d = new DAO_EducationImpl();
+            
+            try {
+                d.deleteStoredProcedureIntoStudent(Integer.parseInt(studentidTF.getText()));
+            } catch (SQLException ex) {
+                Logger.getLogger(addCourse.class.getName()).log(Level.SEVERE, null, ex);
+            }
         for (int i = 0; i < University.getTeachers().size(); i++) {
             if(University.getTeacher(i).getTeacherId().equals(key)){
                 University.removeTeacher(i);
